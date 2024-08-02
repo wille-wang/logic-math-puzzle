@@ -35,7 +35,7 @@ valid_cols(Matrix) :-
     Matrix_T = [_|Rows],
     maplist(valid_row, Rows).
 
-% check if the product of the row values equals the header
+% check if the product or the sum of the row values equals the header
 valid_row(Row) :-
     Row = [Header|Values],
     constrainted_integers(Values),
